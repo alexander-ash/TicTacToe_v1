@@ -41,8 +41,8 @@ public class VisualisationGPTest : MonoBehaviour
             gameCell.transform.localScale = new Vector3(fieldWidth / 3 - 50, fieldHeight / 3 - 50, 0);
         //set the cell in a "GameField" object as Child
             gameCell.transform.SetParent(GameObject.Find("GameField").transform, false);
-            SpriteRenderer spriteRender = gameCell.AddComponent<SpriteRenderer>();
-            spriteRender.sprite = empty;
+                SpriteRenderer spriteRender = gameCell.AddComponent<SpriteRenderer>();
+                spriteRender.sprite = empty;
         //set the position based on cell number
             gameCell.transform.position = new Vector3(((y - 1) * ((int)(fieldWidth / 2))), ((x - 1) * -(int)(fieldHeight / 2)), 0);
     }

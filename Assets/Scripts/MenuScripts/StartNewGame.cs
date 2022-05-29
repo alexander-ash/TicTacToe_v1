@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class StartNewGame : MonoBehaviour
 {
-    string playerChoise = "X";
-    string opponentChoise ;
+    string playerChoise;
+    string opponentChoise;
 
-    public void getStartSetUp (string results)
+    public void getStartSetUp(string results)
     {
         if ((results == "AI") || (results == "Friend"))
         {
@@ -22,17 +22,18 @@ public class StartNewGame : MonoBehaviour
 
     // public string returnStartSetUp() { return }
 
-    public void CheckSettingsAndStartGame ()
+    public void CheckSettingsAndStartGame()
     {
-        if (opponentChoise == "AI")
+        if (opponentChoise == "AI" && playerChoise != null) 
         {
             Debug.Log("Player: " + playerChoise + " Opponent: " + opponentChoise);
             SceneManager.LoadScene(3);
         }
         if (opponentChoise == "Friend")
         {
+
             Debug.Log("Player: " + playerChoise + " Opponent: " + opponentChoise);
-            playerChoise = "X";
+            playerChoise = "X";            
             SceneManager.LoadScene(3);
         }
     }
